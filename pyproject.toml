@@ -33,7 +33,7 @@ addopts = '-p no:warnings'
 [tool.taskipy.tasks]
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format .'
-run = 'fastapi dev banco_imobiliario/main.py'
+run = 'fastapi dev banco_imobiliario/main.py --port 8080'
 pre_test = 'task lint'
 test = 'pytest --cov=banco_imobiliario -vv'
 post_test = 'coverage html'
